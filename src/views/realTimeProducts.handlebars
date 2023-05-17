@@ -1,0 +1,48 @@
+<div>
+  <h2>Agregar un producto</h2>
+
+  <form method="post" action="/realtimeproducts">
+    <ul>
+    <label>Título</label>
+    <input name="title">
+    </ul>
+    <label>Descripción</label>
+    <input name="description">
+    <ul>
+    <label>Precio</label>
+    <input name="price">
+    </ul>
+    <label>Imagen</label>
+    <input name="thumbnail">
+    <ul>
+    <label>Código</label>
+    <input name="code">
+    </ul>
+    <label>Stock</label>
+    <input name="stock">
+    <ul>
+    <label>Categoría</label>
+    <input name="category">
+    </ul>
+    <input type="submit" value="Agregar producto">    
+  </form>
+  
+
+  <form method="post" action="/realtimeproducts">
+    <input type="hidden" name="_method" value="DELETE">
+    <br>
+    <label for="id">Coloque el ID del producto a eliminar</label>
+    <input name="id" id="id">
+    <br>
+    <br>
+    <input type="submit" id="deleteProduct" value="Eliminar producto">
+  </form>
+
+  <div>
+    <h2>Todos nuestros productos</h2>
+      <div id="allProducts"></div>
+  </div>
+    
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/realTimeProducts.js"></script>
