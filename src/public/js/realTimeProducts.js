@@ -7,7 +7,7 @@ socket.on("renderProducts", products =>{
 
    products.forEach(element => {
       allProducts.innerHTML += `
-      <h3>Producto ${element.id}</h3>
+      <h3>Producto ${element._id}</h3>
       <P>Título: ${element.title}</P>
       <P>Descripción: ${element.description}</P>
       <P>Precio: ${element.price}</P>

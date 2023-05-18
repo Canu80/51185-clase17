@@ -19,7 +19,9 @@ const cartSchema = new mongoose.Schema({
     
 },{ collection: "Carts" });
 
-cartSchema.plugin(mongoosePaginate);
+cartSchema.pre("find", function () {
+    this.populate("products.product")
+})
 
 const cartsModel = mongoose.model(cartsCollection, cartSchema);
 

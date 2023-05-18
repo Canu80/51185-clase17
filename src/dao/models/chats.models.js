@@ -13,8 +13,7 @@ const chatSchema = new mongoose.Schema({
     } 
   },{ collection: "Messages" });
 
-  chatSchema.plugin(mongoosePaginate);
-
-  const chatsModel = mongoose.model(chatCollection, chatSchema);
+chatSchema.plugin(mongoosePaginate);
+const chatsModel = mongoose.model(chatCollection, chatSchema);
 
 export default chatsModel;

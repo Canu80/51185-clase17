@@ -10,18 +10,7 @@ export default class ChatsManagerMongo {
 
   // Agregamos un chat
   addChat = async (data) => {
-    const chats = await this.getChats();
-
-    const newChat = {
-        user: data.user,
-        message: data.message
-    };
-    chats.push(newChat);
-    try {
-        await chatsModel.create(chats);
-        return "Mensaje agregado";
-    } catch (error) {
-        return error;
-    }
+    const newChats =await chatsModel.create(data);
+    return newChats    
   };  
 };

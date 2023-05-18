@@ -6,8 +6,9 @@ const productsManagerMongo = new ProductsManagerMongo();
 
 // Obtenemos todos los productos
 router.get("/", async (req, res) => {
-  let allProducts = await productsManagerMongo.getProducts();
+  let allProducts = await productsManagerMongo.getProductsReal();
   res.render("realTimeProducts", { products: allProducts });
+  //res.send({allProducts})
 });
 
 // Agregar un nuevo producto
